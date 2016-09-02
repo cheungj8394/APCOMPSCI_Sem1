@@ -1,0 +1,21 @@
+Notes 01
+
+-just need a text editor to write Java programs
+-written code=assembly code (stored in regular txt file w/.java)
+-JDK=Java Development Kit
+	compiles and executes your code
+SIMPLE PROGRAMS FORMAT
+public class NAME OF DOC
+	{
+		public static void main(string[]args)
+		{
+			system.out.Println("    ");
+		}	
+	}
+-written code-> compile code (assembly code-> Java bytecode computer can read)
+	NppExec:set up compiler
+-JVM=Java Virtual Machine
+	reads bytecode, translates it to machine code that computer understands
+*F6 to compile and execute*
+-if you want" " in code, add \ before each "
+-if you want to add \ in print, add 2 \ instead
