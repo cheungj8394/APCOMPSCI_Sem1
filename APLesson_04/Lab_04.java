@@ -29,15 +29,15 @@ public class Lab_04
 		double all=total+tax;
 		
 		System.out.println("\n");
-		System.out.format("%10s","Receipt");
+		System.out.format("%24s","<<<<<<<Receipt>>>>>>>");
 		System.out.format("\n");
-		System.out.format("\n%15s      %5.2f",item1,price1);
-		System.out.format("\n%15s      %5.2f",item2,price2);
-		System.out.format("\n%15s      %5.2f",item3,price3);
+		System.out.format("\n*%15s ....... %5.2f",item1,price1);
+		System.out.format("\n*%15s ....... %5.2f",item2,price2);
+		System.out.format("\n*%15s ....... %5.2f",item3,price3);
 		System.out.format("\n");
-		System.out.format("\n%15s      %5.2f","Subtotal:",total);
-		System.out.format("\n%15s      %5.2f","Tax:",tax);
-		System.out.format("\n%15s      %5.2f","Total:",all);
+		System.out.format("\n*%15s ....... %5.2f","Subtotal:",total);
+		System.out.format("\n*%15s ....... %5.2f","Tax:",tax);
+		System.out.format("\n*%15s ....... %5.2f","Total:",all);
 		
 		
 	}
