@@ -1,5 +1,5 @@
-import java.util.Scanner;//import Statement
-public class Lab_04
+import java.util.Scanner;
+public class Receipt
 {
 	public static void main(String[]args)
 	{
