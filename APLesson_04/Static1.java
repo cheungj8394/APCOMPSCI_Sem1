@@ -1,8 +1,7 @@
 import java.util.Scanner;
-public class Rectangle
+public class Static1
 {
 
-	
 	public static void main(String[]args)
 	{
 		int width=10;
