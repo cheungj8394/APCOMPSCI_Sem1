@@ -9,18 +9,18 @@ public class Lab_05_1
 		System.out.println("You rolled a "+playerRoll);
 		System.out.println("The computer rolled a "+compRoll);
 		
-		if(rollDice())
+		if(rollDice(int playerRoll,int compRoll))
 		{
 			System.out.println("The winner is you.");
 		}
 	
-		if(!rollDice())
+		if(!rollDice(int playerRoll,int compRoll))
 		{
 			System.out.println("The winner is the computer.");
 		}
 			
 	}
-	public static boolean rollDice(playerRoll,compRoll)
+	public static boolean rollDice(int playerRoll,int compRoll)
 	{
 		return playerRoll>compRoll;
 	}
