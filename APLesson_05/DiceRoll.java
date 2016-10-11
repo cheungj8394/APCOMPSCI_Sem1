@@ -1,5 +1,5 @@
 import java.util.Random;
-public class Lab_05_1
+public class DiceRoll
 {
 	public static void main(String[]args)
 	{
@@ -8,21 +8,20 @@ public class Lab_05_1
 		int compRoll=rand.nextInt(6)+1;
 		System.out.println("You rolled a "+playerRoll);
 		System.out.println("The computer rolled a "+compRoll);
+		rollDice(playerRoll, compRoll);
 		
-		if(rollDice(int playerRoll,int compRoll))
+	}
+	public static void rollDice(int playerRoll,int compRoll)
+	{
+		if(playerRoll>compRoll)
 		{
 			System.out.println("The winner is you.");
 		}
 	
-		if(!rollDice(int playerRoll,int compRoll))
+		if(compRoll>playerRoll)
 		{
 			System.out.println("The winner is the computer.");
 		}
-			
 	}
-	public static boolean rollDice(int playerRoll,int compRoll)
-	{
-		return playerRoll>compRoll;
-	}
-	
+	 
 }
