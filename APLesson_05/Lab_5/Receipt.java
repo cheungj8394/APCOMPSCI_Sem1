@@ -30,14 +30,17 @@ public class Receipt
 		double total=subtot-discount+tax;
 		
 		System.out.println("<<<<<Receipt>>>>>");
+		System.out.printf("\n");
 		format(item1,price1);
 		format(item2,price2);
 		format(item3,price3);
 		format(item4,price4);
+		System.out.printf("\n");
 		System.out.printf("%10s %4.2f\n","Subtotal:",subtot);
 		System.out.printf("%10s %4.2f\n","Discount:",discount);
 		System.out.printf("%10s %4.2f\n","Tax:",tax);
 		System.out.printf("%10s %4.2f\n","Total:",total);
+		System.out.printf("\n");
 		System.out.println("Thank you for shopping with us today :)");
 	}
 	public static double calcDisc(double subtot)
@@ -48,6 +51,6 @@ public class Receipt
 	}
 	public static void format(String item,double price)
 	{
-		System.out.printf("%10s %6.2f\n",item,price);
+		System.out.printf("%10s %4.2f\n",item,price);
 	}
 }
