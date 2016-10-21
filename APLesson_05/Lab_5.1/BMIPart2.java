@@ -17,17 +17,17 @@ public class BMIPart2
 	{
 		String condition="";
 		if (bmi<18.5)
-			condition="Underweight";
-		if (18.5<=bmi<=24.9)
-			condition="Normal";
-		if (25.0<=bmi<=29.9)
-			condition="Normal";
-		if (30.0<=bmi<=34.9)
-			condition="Obese";
-		if (35.0<=bmi<=39.9)
-			condition="Very Obese";
-		if (bmi>39.9)
-			condition="Morbidly Obese";
-			
+			return "Underweight";
+		else if (bmi<=24.9)
+			return "Normal";
+		else if (bmi<=29.9)
+			return "Normal";
+		else if (bmi<=34.9)
+			return "Obese";
+		else if (bmi<=39.9)
+			return "Very Obese";
+		else if (bmi>39.9)
+			return "Morbidly Obese";
+		return "";
 	}
 }
