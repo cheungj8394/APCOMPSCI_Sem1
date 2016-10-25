@@ -25,7 +25,7 @@ public class PasswordProg
 				System.out.println("Your password is incorrect!");
 				passCheck();
 			}
-			if(!user.equals("cheungj8394")&&pass.equals("password"))
+			else if(!user.equals("cheungj8394")&&pass.equals("password"))
 			{
 				System.out.println("Your username is incorrect!");
 				passCheck();
