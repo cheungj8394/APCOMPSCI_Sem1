@@ -41,21 +41,21 @@ public class Adventure
 			String place=kb.next();
 			if(place.equals("a"))
 			{
-				System.out.println("You are going to Hawaii!! Do you want to a. Go to the beach, or b. Milk Chocolate");
+				System.out.println("You are going to Hawaii!! Do you want to a. Go to the beach, or b. Go snorkeling.");
 				String chocotype= kb.next();
 				if(chocotype.equals("a"))
-					System.out.println("Yum! Dark Chocolate is now in your tummy :)");
+					System.out.println("Don't forgot to grab some sunscreen and a towel!!");
 				else
-					System.out.println("Here's some Milk Chocolate then :)");
+					System.out.println("Awesome! Don't forget to guy your snorkeling gear.");
 			}
 			else
 			{
-				System.out.println("Here's your lollipop! Do you want a. Swirly Lollipop, or b. Striped Lollipop");
+				System.out.println("India it is!! Do you want to a. Ride an elephant or b. See the Taj Mahal");
 				String lolType=kb.next();
 				if(lolType.equals("a"))
-					System.out.println("Nice! You just got a Swirly Lollipop!");
+					System.out.println("Sure thing! Made sure you don't fall off of the elephant!");
 				else
-					System.out.println("You can now eat your striped lollipop! Lucky you!");
+					System.out.println("Sweeeeet... take lots of pictures!!");
 			}
 		}
 	}
