@@ -7,7 +7,7 @@ public class Factorial
 		System.out.println("Please enter a number:");
 		int num=kb.nextInt();
 		int fact=1;
-		for(int i=1;i<=num;i)
+		for(int i=1;i<=num;i++)
 		{
 			System.out.println(fact*i);
 		}
