@@ -1,17 +1,16 @@
 import java.util.Scanner;
-public class Left Triangle
+public class LeftTriangle
 {
 	public static void main(String[]args)
 	{
 		Scanner kb=new Scanner(System.in);
-		System.out.println("Enter the number you want to count up to:");
-		int max=kb.nextInt();
-		System.out.println("Enter the increment:");
-		int increm=kb.nextInt();
+		System.out.println("Enter a word:");
+		String word=kb.nextLine();
 		
-		for(int i=0; i<max;i+=increm)
+		
+		for(int i=0; i<=word.length();i++)
 		{
-			System.out.printf(i+increm+"\t");
+			System.out.println(word.substring(i));
 		}
 	}
 }

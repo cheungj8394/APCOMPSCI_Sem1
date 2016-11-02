@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ReverseTriangle
+public class GraphTable
 {
 	public static void main(String[]args)
 	{
@@ -9,9 +9,9 @@ public class ReverseTriangle
 		System.out.println("Please enter the size of the table:");
 		int size=kb.nextInt();
 		
-		for(int i=1; i>=size;)
+		for(int i=1; i<=size;i++)
 		{
-			System.out.println(i \n i*num);
+			System.out.printf("%4d  %4d\n",i,i*num);
 		}
 	}
 }
