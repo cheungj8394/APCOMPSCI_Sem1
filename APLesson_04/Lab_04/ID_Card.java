@@ -3,6 +3,7 @@ public class ID_Card
 {
 	public static void main(String[]args)
 	{
+	ID_Card form= new ID_Card();
 	System.out.println("Enter your first name:");
 	Scanner keyboard=new Scanner(System.in);
 	String First=keyboard.next();
@@ -25,11 +26,16 @@ public class ID_Card
 
 	System.out.println("\n");
 	System.out.format("\n%38s","**************************************");
-	System.out.format("\n* %12s  %20s *",School,Year);
-	System.out.format("\n* %12s	%20s *",First,Last);
-	System.out.format("\n* %12s	%20s *",job,sub);
+	form.format(School,Year);
+	form.format(First,Last);
+	form.format(job,sub);
 	System.out.format("\n%38s","**************************************");
-	
-	
 	}
+	
+	public void format(String word1, String word2)
+	{
+		System.out.printf("*12s\t%20s*\n",word1, word2);
+	}
+	
+	
 }
