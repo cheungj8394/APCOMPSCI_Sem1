@@ -3,6 +3,7 @@ public class Receipt
 {
 	public static void main(String[]args)
 	{
+		Receipt input= new Receipt();
 		System.out.println("Please enter item 1:");
 		Scanner keyboard=new Scanner(System.in);
 		String item1=keyboard.nextLine();
@@ -31,14 +32,17 @@ public class Receipt
 		System.out.println("\n");
 		System.out.format("%24s","<<<<<<<Receipt>>>>>>>");
 		System.out.format("\n");
-		System.out.format("\n*%15s ....... %5.2f",item1,price1);
-		System.out.format("\n*%15s ....... %5.2f",item2,price2);
-		System.out.format("\n*%15s ....... %5.2f",item3,price3);
+		input.format(item1, price1);
+		input.format(item2, price2);
+		input.format(item3, price3);
 		System.out.format("\n");
-		System.out.format("\n*%15s ....... %5.2f","Subtotal:",total);
-		System.out.format("\n*%15s ....... %5.2f","Tax:",tax);
-		System.out.format("\n*%15s ....... %5.2f","Total:",all);
+		input.format("Subtotal:",total);
+		input.format("Tax:",tax);
+		input.format("Total:",all);
 		
-		
+	}
+	public void format(String item, double price)
+	{
+		System.out.printf("*%15s ....... %5.2f\n",item, price);
 	}
 }

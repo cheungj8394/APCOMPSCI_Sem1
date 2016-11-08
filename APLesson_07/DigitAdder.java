@@ -8,14 +8,15 @@ public class DigitAdder
 		Scanner kb= new Scanner(System.in);
 		System.out.println("Enter a number:");
 		num=kb.nextInt();
-		
+		System.out.println("The sum of the digits in " + num + " is " + sumDigits());
 	}
-	public static void sumDigits()
+	static int sumDigits()
 	{
-		num=
 		while(num>0)
 		{
-			
+			sum+=num%10;
+			num/=10;
 		}
+		return sum;
 	}
 }
