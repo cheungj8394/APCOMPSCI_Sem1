@@ -34,5 +34,7 @@ public class ID_Card
 		public void format(String word, String word2)
 	{
 		System.out.printf("*%10s\t\t\t%15s*\n", word, word2);		
+
 	}
+	
 }

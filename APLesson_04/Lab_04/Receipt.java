@@ -46,3 +46,5 @@ public class Receipt
 		System.out.printf("*%15s ....... %5.2f\n",item, price);
 	}
 }
+
+
