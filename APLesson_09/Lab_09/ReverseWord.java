@@ -20,14 +20,14 @@ public class ReverseWord
 		}
 		System.out.println();
 		System.out.println("Reversed:");
-		System.out.println(reverse(words));
+		reverse(words);
 	}
-	public static String reverse(String[]r)
+	public static void reverse(String[]r)
 	{
-		for(int i=r.length; i>0; i--)
+		for(int i=r.length-1; i>=0; i--)
 		{
-			System.out.println(r);
+			System.out.println(r[i]);
 		}
-		return r;
+		
 	}
 }
