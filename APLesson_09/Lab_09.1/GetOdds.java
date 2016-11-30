@@ -1,36 +1,37 @@
 public class GetOdds
 {
-	static int [] numbers;
+	static int [] Array;
 	
 	public static void main(String[]args)
 	{
-		numbers = new int[10];
-		fillArray(numbers);
+		Array = new int[10];
+		fillArray(Array);
 		System.out.println("For the following numbers...");
-		printArray(numbers);
-		System.out.println(getOdds(numbers)+" are odd numbers");
+		printArray(Array);
+		System.out.println("");
+		System.out.println("The "+getOdds(Array)+" are odd numbers");
 	}
 	
-	public static void fillArray(int [] numbers)
+	public static void fillArray(int [] Array)
 	{
-		for(int i = 0; i < numbers.length; i++)
+		for(int i=0; i<Array.length; i++)
 		{
-			numbers[i] = (int)(Math.random() * 100) +1;
+			Array[i]=(int)(Math.random()*100)+1;
 		}
 	}
 	
-	public static void printArray(int [] numbers)
+	public static void printArray(int [] Array)
 	{
-		for(int number: numbers)
+		for(int number:Array)
 		{
-			System.out.print(number);
+			System.out.print(number+"\t");
 		}
 	}
 	
 	public static String getOdds(int [] numbers)
 	{
 		String odds = "";
-		for(int number: numbers)
+		for(int number:Array)
 		{
 			if(number%2==1)
 				odds += number + " ";

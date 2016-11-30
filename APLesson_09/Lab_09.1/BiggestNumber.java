@@ -14,19 +14,19 @@ public class BiggestNumber
 	public static void fillArray(int [] numbers)
 	{
 		for(int i = 0; i < numbers.length; i++)
-			numbers[i] = (int)(Math.random() * 100) +1;
+			numbers[i] = Math.random()*100;
 	}
 	
 	public static void printArray(int [] numbers)
 	{
-		for(int number: numbers)
-			System.out.println(number);
+		for(int number:numbers)
+			System.out.println(number+"\t");
 	}
 	
 	public static int getBiggest(int [] numbers)
 	{
 		int max = 0;
-		for(int number: numbers)
+		for(int number:numbers)
 		{
 			if(number > max)
 				max = number;
