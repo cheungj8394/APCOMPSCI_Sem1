@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,10 +7,10 @@ public class ExpresssionSolver
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Enter an equation:");
-		String equation1 = kb.nextLine();
+		System.out.println("Please enter an expression: ");
+		String expression = kb.nextLine();
 		
-		ArrayList<String>equation = new ArrayList<>(Arrays.asList(equation1.split(" ")));
+		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
 		
 		System.out.println(doEquation(equation));
 	}
