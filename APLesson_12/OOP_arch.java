@@ -1,18 +1,16 @@
 public class OOP_arch
 {
-	//instance variables
 	private String userName, firstName, lastName;
 	
-	//Default Constructor
+
 	public OOP_arch()
 	{
-		//default values for instance vars
 		userName="";
 		firstName="";
 		lastName="";
 	}
 	
-	//Constructor with params
+
 	public OOP_arch(String uName,String fName,String lName)
 	{
 		userName=uName;
@@ -20,13 +18,11 @@ public class OOP_arch
 		lastName=lName;
 	}
 	
-	//Modifier
 	public void setUserName(String uName)
 	{
 		userName=uName;
 	}
-	
-	//Accessors
+
 	public String getUserName()
 	{
 		return userName;
@@ -36,6 +32,7 @@ public class OOP_arch
 	{
 		return firstName;
 	}
+	
 	public String getLastName()
 	{
 		return lastName;
@@ -53,7 +50,6 @@ public class OOP_arch
 		
 		System.out.println("<<<<<<<<<<<< USER INFO>>>>>>>>>>>>");
 		System.out.println("Name: "+object1.getFirstName()+" "+object1.getLastName);
-		System.out.println("User Name: "+object1.getUserName());
-		
+		System.out.println("User Name: "+object1.getUserName());	
 	}
 }

@@ -23,7 +23,7 @@ public class GameHealth
 			System.out.println(takeDamage(damage,amount));
 			printClip();
 		}
-		
+		 
 		System.out.println("You died!!");
 	}
 	
