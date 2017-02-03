@@ -1,4 +1,4 @@
-public class ToyClass
+public abstract ToyClass
 {
 	private String name;
 	private int count;
@@ -6,12 +6,13 @@ public class ToyClass
 	public ToyClass()
 	{
 		this.count=1;
+		this.name="";
 	}
 	
-	public ToyClass(String n)
+	public ToyClass(String n, int c)
 	{
 		this.name=n;
-		this.count=1;
+		this.count=c=1;
 	}
 	
 	public String getName()
@@ -36,9 +37,9 @@ public class ToyClass
 	
 	public abstract String getType();
 	
-	public String toString()
+	public String toString(String n, int c)
 	{
-		return "[Name][Count]"+"\n";
+		return "["+name+"]"+"["+count+"]"+"\n";
 	}
 	
 }

@@ -1,8 +1,12 @@
 public class ToyRunnerClass extends ToyClass
 {
-	var AFigure=new Object(String name);
-	var Car=new Object(String name);
-	
-System.out.println(toString());
+	public static void main(String[]args)
+	{
+		AFigure object= new AFigure();
+		Car object=new Car();
+
+		
+		System.out.println(toString(Hotwheels));
+	}
 
 }
