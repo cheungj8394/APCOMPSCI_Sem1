@@ -1,7 +1,7 @@
 public class AFigureClass extends ToyClass
 {
 	super();
-	AFigure object= new AFigure();
+	AFigureClass AFigure= new AFigureClass();
 	
 	public AFigureClass()
 	{

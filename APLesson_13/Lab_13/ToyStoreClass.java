@@ -3,7 +3,7 @@ public class ToyStoreClass
 {
 	private ArrayList <ToyClass> toyList;
 	
-	public static void main(String[]args)
+	public void main(String[]args)
 	{
 		toyList = new ArrayList<ToyClass>();
 	}
@@ -13,8 +13,9 @@ public class ToyStoreClass
 		loadToys(toyList);
 	}
 	
-	public ToyStoreClass(ArrayList <ToyClass> toyList)
+	public ToyStoreClass(String l)
 	{
+		l=toyList;
 		loadToys(toyList);
 	}
 	
