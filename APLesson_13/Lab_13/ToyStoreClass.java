@@ -1,68 +1,84 @@
+import java.util.Arrays;
 import java.util.ArrayList;
 public class ToyStoreClass
 {
-	private ArrayList <ToyClass> toyList;
-	
-	public void main(String[]args)
-	{
-		toyList = new ArrayList<ToyClass>();
-	}
+	private static ArrayList <ToyClass> toyList=new ArrayList<ToyClass>();
 	
 	public ToyStoreClass()
 	{
-		loadToys(toyList);
+
 	}
 	
 	public ToyStoreClass(String l)
 	{
-		l=toyList;
-		loadToys(toyList);
+		loadToys(l);
 	}
 	
-	public void loadToys(ArrayList <> ts)
+	public static void loadToys(String ts)
 	{
-		ts.split(", ")="toys";
+		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
+		
 		for(int i=0; i<toys.size(); i++)
 		{
-			String name=toys[i];
-			String type=toys[i+1];
-			
-			
-			
+			String name=toys.get(i);
+			String type=toys.get(i+1);
+			ToyClass nextToyClass=getThatToy(name);
+			if (getThatToy(name) == null)
+			{
+				if (type.equals("Car"))
+				{
+					toyList.add(new Car(name));
+				}
+				if (type.equals("AF"))
+				{
+					toyList.add(new AFigure(name));
+				}
+			}
+			else
+				nextToyClass.setCount(nextToyClass.getCount() + 1);
 		}
 	}
 	
-	public void getThatToy(String nm)
+	public static ToyClass getThatToy(String nm)
 	{
-		for(toy:toyList)
-			if(name==nm)
-				return toy;
+		for(ToyClass nextToy:toyList)
+		{
+			if(nextToyClass.getName().equals(nm))
+				return nextToyClass;
+		}
 		return null;
 	}
 	
-	public void getMostFrequentToy()
+	public String getMostFrequentToy()
 	{
 		String name="";
-		int max=Integer.min_value;
-		for(toy:toyList)
+		int max=Integer.MIN_VALUE;
+		for(ToyClass nextToyClass:toyList)
 		{
-			if(max<=count)
-				return name;
-			if(name==toy)
-				return name;
+			if(max<nextToyClass.getCount())
+			{	
+				max = nextToyClass.getCount();
+				name = nextToyClass.getName();
+			}
+				
 		}
+		return name;
 	}
 	
-	public void getMostFrequentType()
+	public String getMostFrequentType()
 	{
 		int cars=0;
 		int figures=0;
-		for(toy:toyList)
+		for(ToyClass nextToy:toyList)
 		{
-			if(type==Car)
-				cars+=1;
-			if(type==AF)
-				figures+=1;
+			if (nextToyClass.getType().equals("Car"))
+			{
+				cars += 1;
+			}
+			if (nextToyClass.getType().equals("AF"))
+			{
+				figures += 1;
+			}
 		}
 		
 		if(cars>figures)
