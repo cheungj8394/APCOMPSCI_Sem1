@@ -1,15 +1,8 @@
 public class StudentAdvance extends Advance
-{
-	super();
-	
-	public StudentAdvance()
-	{
-		super();
-	}
-	
+{	
 	public StudentAdvance(int d)
 	{
-		super();
+		super(d);
 	}
 	
 	public int getSerialNo()
@@ -17,16 +10,13 @@ public class StudentAdvance extends Advance
 		return super.getSerialNo();
 	}
 	
-	public int getPrice()
+	public double getPrice()
 	{
-		if(daysLeft>=10)
-			return 15.00;
-		else
-			return 20.00;
+		return super.getPrice()/2;
 	}
 	
 	public String toString()
 	{
-		return "Serial #: "+serialNo+"\nPrice: "+getSerialNo()+"/n(STUDENT ID REQUIRED)";
+		return "Serial #: "+getSerialNo() +"\nPrice: "+getPrice()+"/n(STUDENT ID REQUIRED)";
 	}
 }

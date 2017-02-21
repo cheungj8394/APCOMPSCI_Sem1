@@ -1,27 +1,14 @@
 public class Advance extends Ticket
 {
-	super();
 	private int daysLeft;
 	
-	public Advance()
+	public Advance(int d)
 	{
 		super();
 		daysLeft=d;
 	}
 	
-	public Advance(int d)
-	{
-		ticket=t;
-		serialNo=s;
-		daysLeft=d;
-	}
-	
-	public int getSerialNo()
-	{
-		return super.getSerialNo();
-	}
-	
-	public int getPrice()
+	public double getPrice()
 	{
 		if(daysLeft>=10)
 			return 30.00;
