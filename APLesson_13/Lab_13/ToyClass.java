@@ -9,10 +9,10 @@ public abstract class ToyClass
 		this.name="";
 	}
 	
-	public ToyClass(String n, int c)
+	public ToyClass(String n)
 	{
 		this.name=n;
-		this.count=c=1;
+		this.count=1;
 	}
 	
 	public String getName()
@@ -37,7 +37,7 @@ public abstract class ToyClass
 	
 	public abstract String getType();
 	
-	public String toString(String n, int c)
+	public String toString()
 	{
 		return "["+name+"]"+"["+count+"]"+"\n";
 	}

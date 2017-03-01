@@ -16,8 +16,4 @@ public class Advance extends Ticket
 			return 40.00;
 	}
 	
-	public String toString()
-	{
-		return super.toString();
-	}
 }

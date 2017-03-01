@@ -1,50 +1,51 @@
 import java.util.Arrays;
 import java.util.ArrayList;
+
 public class ToyStoreClass
 {
-	private static ArrayList <ToyClass> toyList=new ArrayList<ToyClass>();
+	private ArrayList <ToyClass> toyList=new ArrayList<>();
 	
 	public ToyStoreClass()
 	{
-
+		toyList = null;
 	}
 	
-	public ToyStoreClass(String l)
+	public ToyStoreClass(String ts)
 	{
-		loadToys(l);
+		loadToys(ts);
 	}
 	
-	public static void loadToys(String ts)
+	public void loadToys(String ts)
 	{
 		ArrayList<String> toys = new ArrayList<String>(Arrays.asList(ts.split(", ")));
 		
-		for(int i=0; i<toys.size(); i++)
+		for(int i=0; i<toys.size(); i+=2)
 		{
 			String name=toys.get(i);
 			String type=toys.get(i+1);
-			ToyClass nextToyClass=getThatToy(name);
-			if (getThatToy(name) == null)
+			ToyClass t=getThatToy(name);
+			if (t == null)
 			{
 				if (type.equals("Car"))
 				{
-					toyList.add(new Car(name));
+					toyList.add(new CarClass(name));
 				}
 				if (type.equals("AF"))
 				{
-					toyList.add(new AFigure(name));
+					toyList.add(new AFigureClass(name));
 				}
 			}
 			else
-				nextToyClass.setCount(nextToyClass.getCount() + 1);
+				t.setCount(t.getCount() + 1);
 		}
 	}
 	
-	public static ToyClass getThatToy(String nm)
+	public ToyClass getThatToy(String nm)
 	{
-		for(ToyClass nextToy:toyList)
+		for(ToyClass i:toyList)
 		{
-			if(nextToyClass.getName().equals(nm))
-				return nextToyClass;
+			if(i.getName().equals(nm))
+				return i;
 		}
 		return null;
 	}
@@ -53,12 +54,12 @@ public class ToyStoreClass
 	{
 		String name="";
 		int max=Integer.MIN_VALUE;
-		for(ToyClass nextToyClass:toyList)
+		for(ToyClass i:toyList)
 		{
-			if(max<nextToyClass.getCount())
+			if(max<i.getCount())
 			{	
-				max = nextToyClass.getCount();
-				name = nextToyClass.getName();
+				max = i.getCount();
+				name = i.getName();
 			}
 				
 		}
@@ -69,13 +70,13 @@ public class ToyStoreClass
 	{
 		int cars=0;
 		int figures=0;
-		for(ToyClass nextToy:toyList)
+		for(ToyClass i:toyList)
 		{
-			if (nextToyClass.getType().equals("Car"))
+			if (i.getType().equals("Car"))
 			{
 				cars += 1;
 			}
-			if (nextToyClass.getType().equals("AF"))
+			if (i.getType().equals("AF"))
 			{
 				figures += 1;
 			}
@@ -91,6 +92,6 @@ public class ToyStoreClass
 	
 	public String toString()
 	{
-		return toyList;
+		return ""+toyList;
 	}
 }

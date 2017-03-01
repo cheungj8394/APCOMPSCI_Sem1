@@ -1,36 +1,14 @@
 public class AFigureClass extends ToyClass
 {
-	super();
-	AFigureClass AFigure= new AFigureClass();
 	
 	public AFigureClass()
 	{
 		super();
 	}
 	
-	public AFigureClass(String n, int c)
+	public AFigureClass(String n)
 	{
-		super();
-	}
-	
-	public String getName()
-	{
-		return super.getName();
-	}
-	
-	public int getCount()
-	{
-		return super.getCount();
-	}
-	
-	public void setName(String n)
-	{
-		super();
-	}
-	
-	public void setCount(int c)
-	{
-		super();
+		super(n);
 	}
 	
 	public String getType()

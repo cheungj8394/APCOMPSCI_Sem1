@@ -5,24 +5,22 @@ public class GameSystemClass
 	
 	public GameSystemClass()
 	{
-		this.platform=p;
-		this.serialNo=(int)(Math.random()*10000000);
+		this.platform="";
 	}
 	
 	public GameSystemClass(String p)
 	{
-		this.platfrom=p;
-		this.serialNo=(int)(Math.random()*10000000);
+		this.platform=p;
 	}
 	
 	public String getPlatform()
 	{
-		return platform;
+		return this.platform;
 	}
 	
 	public int getSerialNo()
 	{
-		return serialNo;
+		serialNo=(int)(Math.random()*10000000);
+		return this.serialNo;
 	}
-	
-	
+}

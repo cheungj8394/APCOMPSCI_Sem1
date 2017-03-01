@@ -5,10 +5,6 @@ public class StudentAdvance extends Advance
 		super(d);
 	}
 	
-	public int getSerialNo()
-	{
-		return super.getSerialNo();
-	}
 	
 	public double getPrice()
 	{
@@ -17,6 +13,6 @@ public class StudentAdvance extends Advance
 	
 	public String toString()
 	{
-		return "Serial #: "+getSerialNo() +"\nPrice: "+getPrice()+"/n(STUDENT ID REQUIRED)";
+		return "Serial #: "+getSerialNo() +"\nPrice: $"+getPrice()+"\n(STUDENT ID REQUIRED)\n";
 	}
 }
