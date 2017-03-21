@@ -1,6 +1,6 @@
-public class Honda2 extends Car
+public class Honda3 extends Car3
 {
-	public Honda2(double[] l)
+	public Honda3(double[] l)
 	{
 		super();
 		double[] location = new double[2];

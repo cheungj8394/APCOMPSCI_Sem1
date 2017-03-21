@@ -1,7 +1,7 @@
 import java.util.*;
-public class Toyota2 extends Car
+public class Toyota3 extends Car3
 {
-	public Toyota2(String l)
+	public Toyota3(String l)
 	{
 		super();
 		ArrayList<String> loc = new ArrayList<>(Arrays.asList(l.split(", ")));

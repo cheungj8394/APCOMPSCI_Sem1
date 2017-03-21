@@ -1,9 +1,9 @@
-public abstract class Car implements Location2
+public abstract class Car3 implements Location3
 {
 	public final int ID = (int)(Math.random()*1000000)+999999;
 	private double[] location;
 	
-	public Car()
+	public Car3()
 	{
 		location= new double[2];
 	}
